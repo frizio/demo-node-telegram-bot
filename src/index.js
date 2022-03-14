@@ -20,4 +20,8 @@ bot.settings((ctx) => {
   ctx.reply("TODO Settings");
 });
 
+bot.command(['hola', 'Hola', 'ciao', 'Ciao'], (ctx) => {
+  ctx.reply("Saluto custom command reply!");
+});
+
 bot.launch();
