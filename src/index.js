@@ -21,7 +21,9 @@ bot.settings((ctx) => {
 });
 
 bot.command(['hola', 'Hola', 'ciao', 'Ciao'], (ctx) => {
-  ctx.reply("Saluto custom command reply!");
+  ctx.reply("Saluto custom command reply.");
 });
+
+//18.30
 
 bot.launch();
