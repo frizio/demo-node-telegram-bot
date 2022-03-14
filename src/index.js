@@ -12,4 +12,12 @@ bot.start((ctx) => {
   ctx.reply(msg);
 });
 
+bot.help((ctx) => {
+  ctx.reply("TODO Help");
+});
+
+bot.settings((ctx) => {
+  ctx.reply("TODO Settings");
+});
+
 bot.launch();
