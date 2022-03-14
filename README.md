@@ -1,6 +1,4 @@
-# Demo Socketio, Express, Babel
-
-Use import / export instructions...
+# Demo Telegram BOT using NodeJS + Telegraf
 
 - [Telegram Bot con Nodejs y Javascript (Las Bases) | Telegraf](https://www.youtube.com/watch?v=Z7aN0xfn5NM)
 - [Building a Telegram Bot with Node.js in 10 minutes](https://www.youtube.com/watch?v=IlsygSzikOQ)
