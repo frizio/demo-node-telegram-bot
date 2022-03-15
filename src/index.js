@@ -33,8 +33,12 @@ app.post(URI, async (req, res) => {
   let text = req.body.message.text;
   
   console.log('Process text message');
-  text = text.toUpperCase();
-  
+  if (text.startsWith("/")) {
+    text = 'This is a command.';
+  } else {
+    text = text.toUpperCase();
+  }
+
   console.log('Send processed message text to Telegram bot');
   await axios.post(`${TELEGRAM_API}/sendMessage`, {
     chat_id: chatId,
