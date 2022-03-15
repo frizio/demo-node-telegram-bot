@@ -33,4 +33,16 @@ bot.on("sticker", (ctx) => {
   //ctx.reply('👍')
 });
 
+bot.mention("frizioo", (ctx) => {
+  ctx.reply("You mention/tag a user.");
+});
+
+bot.phone("3331234567", (ctx) => {
+  ctx.reply("You've digit a phone number.");
+});
+
+bot.hashtag("sea", (ctx) => {
+  ctx.reply("Hashtag sea!!!");
+});
+
 bot.launch();
