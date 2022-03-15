@@ -20,10 +20,17 @@ bot.settings((ctx) => {
   ctx.reply("TODO Settings");
 });
 
-bot.command(['hola', 'Hola', 'ciao', 'Ciao'], (ctx) => {
+bot.command(["hola", "Hola", "ciao", "Ciao"], (ctx) => {
   ctx.reply("Saluto custom command reply.");
 });
 
-//18.30
+bot.hears("pc", (ctx) => {
+  ctx.reply("You've digit the work 'pc' in lower case");
+});
+
+bot.on("sticker", (ctx) => {
+  ctx.reply("You send a sticker. 👍");
+  //ctx.reply('👍')
+});
 
 bot.launch();
