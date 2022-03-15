@@ -25,6 +25,25 @@ app.get("/api", (req, res) => {
   res.json("hola");
 });
 
+app.post(URI, async (req, res) => {
+  
+  console.log('Receive message from Telegram bot');
+  console.log(req.body);
+  const chatId = req.body.message.chat.id;
+  let text = req.body.message.text;
+  
+  console.log('Process text message');
+  text = text.toUpperCase();
+  
+  console.log('Send processed message text to Telegram bot');
+  await axios.post(`${TELEGRAM_API}/sendMessage`, {
+    chat_id: chatId,
+    text: text,
+  });
+  
+  return res.send();
+
+});
 
 const init = async () => {
   const url = `${TELEGRAM_API}/setWebhook?url=${WEBHOOK_URL}`;
