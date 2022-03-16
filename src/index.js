@@ -45,4 +45,13 @@ bot.hashtag("sea", (ctx) => {
   ctx.reply("Hashtag sea!!!");
 });
 
-bot.launch();
+bot.launch({
+  webhook: {
+    domain: process.env.SERVER_URL,
+    port: process.env.PORT
+  }
+});
+
+// Enable graceful stop
+process.once('SIGINT', () => bot.stop('SIGINT'))
+process.once('SIGTERM', () => bot.stop('SIGTERM'))
