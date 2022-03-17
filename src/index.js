@@ -110,6 +110,31 @@ const requestPhoneKeyboard = {
   },
 };
 
+bot.hears("location", (ctx) => {
+  console.log(ctx.from);
+  bot.telegram.sendMessage(
+    ctx.chat.id,
+    "Can we access your location?",
+    requestLocationKeyboard
+  );
+});
+
+const requestLocationKeyboard = {
+  reply_markup: {
+    one_time_keyboard: true,
+    keyboard: [
+      [
+        {
+          text: "My location",
+          request_location: true,
+          one_time_keyboard: true,
+        },
+      ],
+      ["Cancel"],
+    ],
+  },
+};
+
 bot.launch({
   webhook: {
     domain: process.env.SERVER_URL,
