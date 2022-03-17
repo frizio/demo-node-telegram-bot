@@ -85,6 +85,31 @@ bot.action("cat", (ctx) => {
   */
 });
 
+bot.hears("phone", (ctx, next) => {
+  console.log(ctx.from);
+  bot.telegram.sendMessage(
+    ctx.chat.id,
+    "Can we get access to your phone number?",
+    requestPhoneKeyboard
+  );
+});
+
+const requestPhoneKeyboard = {
+  reply_markup: {
+    one_time_keyboard: true,
+    keyboard: [
+      [
+        {
+          text: "My phone number",
+          request_contact: true,
+          one_time_keyboard: true,
+        },
+      ],
+      ["Cancel"],
+    ],
+  },
+};
+
 bot.launch({
   webhook: {
     domain: process.env.SERVER_URL,
