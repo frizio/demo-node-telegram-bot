@@ -3,6 +3,7 @@
 - [Telegram Bot con Nodejs y Javascript (Las Bases) | Telegraf](https://www.youtube.com/watch?v=Z7aN0xfn5NM)
 - [Building a Telegram Bot with Node.js in 10 minutes](https://www.youtube.com/watch?v=IlsygSzikOQ)
 - [Build a Telegram Bot using TypeScript, Node.js, and Telegraf and deploy it on Heroku](https://medium.com/geekculture/build-a-telegram-bot-using-typescript-node-js-and-telegraf-and-deploy-it-on-heroku-fcc28c15614f)
+- [Building your First Telegram Bot using Node.js and Telegraf](https://www.section.io/engineering-education/telegram-bot-in-nodejs/)
 
 ## Getting started
 
